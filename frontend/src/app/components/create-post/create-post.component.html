@@ -1,0 +1,32 @@
+<div class="container">
+  <form #blogForm="ngForm" (ngSubmit)="onSubmit(blogForm)">
+
+    <!-- {{blogForm.value | json}} -->
+
+    <input type="hidden" name="_id">
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="text" name="title" required ngModel>
+        <label>Title :
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="text" name="category" required ngModel>
+        <label>Category :</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="text" name="content" required ngModel>
+        <label>Content :</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <button class="btn btn-custom right" type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

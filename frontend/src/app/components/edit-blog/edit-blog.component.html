@@ -1,0 +1,35 @@
+<!-- Fill it up with selectedBlog -->
+<div class="container">
+    <form #blogForm="ngForm" (ngSubmit)="onUpdate(blogForm)">
+  
+      <!-- {{blogService?.selectedBlog?.title}}
+      {{blogService?.selectedBlog?.category}}
+      {{blogService?.selectedBlog?.content}} -->
+        
+      <input type="hidden" name="_id">
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" name="title" #name="ngModel" required [(ngModel)]="blogService.selectedBlog.title">
+          <label>Title :
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" name="category" #name="ngModel" required [(ngModel)]="blogService.selectedBlog.category">
+          <label>Category :</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" name="content" #name="ngModel" required [(ngModel)]="blogService.selectedBlog.content">
+          <label>Content :</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <button class="btn btn-custom right" type="submit">Update</button>
+        </div>
+      </div>
+    </form>
+  </div> 

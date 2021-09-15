@@ -1,0 +1,12 @@
+<div class="container">
+    <div>
+        <h1 hidden>{{blogService?.selectedBlog?._id}}</h1>
+        <h1>{{blogService?.selectedBlog?.title}}</h1>
+        <span>
+            <button class="btn btn-success" [routerLink]="['/edit', blogService?.selectedBlog?._id]">Edit</button>
+            <button class="btn btn-danger" (click)="onDelete(id)">Delete</button>
+        </span>
+    </div>
+    <h2 class="category">{{blogService?.selectedBlog?.category}}</h2>
+    <p>{{blogService?.selectedBlog?.content}}</p>
+</div>
